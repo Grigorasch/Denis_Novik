@@ -4,9 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/header.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <header class="header">
+        <nav class="header__nav">
+            <button class="header__burger">
+                <span class="header__burger-menu"></span>
+            </button>
+            <ul class="header__links">
+                <li class="header__links-item">
+                    <a href="#" class="header__links-href header_current-link">Home</a>
+                </li>
+                <li  class="header__links-item">
+                    <a href="#" class="header__links-href">About me</a>
+                </li>
+                <li  class="header__links-item">
+                    <a href="#" class="header__links-href">Skills</a>
+                </li>
+                <li  class="header__links-item">
+                    <a href="#" class="header__links-href">Portfolio</a>
+                </li>
+                <li  class="header__links-item">
+                    <a href="#" class="header__links-href">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header__wrapper">
+            <h1 class="header__heading">Denis Novik</h1>
+            <p class="header__description">UX | UI designer
+                24 years old, Minsk</p>
+            <ul class="header__lang">
+                <li class="header__lang-item">
+                    <a href="#" class="header__lang-href">RU</a>
+                </li>
+                <li class="header__lang-item">
+                    <a href="#" class="header__lang-href header_current-link">ENG</a>
+                </li>
+            </ul>    
+        </div>
+
+        <img src="./images/header/photo_desktop.png" alt="Photo by Denis Novik" class="header__photo-desktop">
+        <img src="./images/header/photo_mobile.png" alt="Photo by Denis Novik" class="header__photo-mobile">
+    </header>
 </body>
 </html>
