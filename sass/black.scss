@@ -13,7 +13,6 @@ $default-font: (color: #000000, weight: normal);
 }
 
 .block {
-    padding: 81px 0 76px;
     margin: auto;
 
     &__wrapper {
@@ -22,11 +21,7 @@ $default-font: (color: #000000, weight: normal);
         text-align: center;
     }
 
-
-
     &__heading {
-        margin-bottom: 30px;
-
         @include font(34, 42, #000000, bold);
     }
 
@@ -39,7 +34,26 @@ $default-font: (color: #000000, weight: normal);
         }
     }
 
-    &__skils {
+    /* ---Блок Skills--- */
+    &__skills {
+        &-item {
+            &:not(:last-child) {
+                margin-bottom: 85px;
+            }
+        }
+
+        &-img {
+            margin-bottom: 24px;
+
+            height: 89px;
+        }
+
+        &-heading {
+            margin-bottom: 41px;
+
+            @include font(14, 17, $color-gray, bold);
+            white-space: pre-line;
+        }
 
         &-progress {
             width: 131px;
@@ -63,6 +77,74 @@ $default-font: (color: #000000, weight: normal);
             }
         }
     }
+
+    /* ---Блок Portfolio--- */
+    &__portfolio {
+        &-item {
+            &:not(:last-child) {
+                margin-bottom: 78px;
+            }
+        }
+
+        &-img {
+            margin-bottom: 35px;
+
+            width: 316px;
+        }
+
+        &-link {
+            @include font(18, 22, $default-font...);
+
+            /* Не ругайтесь за следующий ховер :) Здесь нет элементов слева/справа, поэтому ничего страшного не произойдет */
+            &:hover {
+                font-weight: bold;
+            }
+        }
+    }
+
+    /* ---Блок Contacts--- */
+    &__button {
+        margin-bottom: 48px;
+
+        width: 316px;
+        height: 42px;
+
+        border: 2px solid $color-black;
+        border-radius: 21px;
+        background: $color-black;
+        cursor: pointer;
+        transition: all 0.3s, box-shadow 0.2s;
+
+        @include font(18, 22, #ffffff, bold);
+
+        &:hover, &:focus-visible {
+            background: #ffffff;
+            color: $color-black;
+        }
+
+        &:active {
+            box-shadow: 0 0 10px 0 $color-gray;
+        }
+    }
+
+    &__contacts {
+        &-list {
+            display: flex;
+            gap: 52px;
+            margin-bottom: 48px;
+    
+            list-style: none;
+        }
+
+        &-img {
+            height: 40px;
+            transition: 0.3s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
 }
 
 /* ---Модификаторы--- */
@@ -71,7 +153,55 @@ $default-font: (color: #000000, weight: normal);
         background: $color-background-gray;
     }
 
-    &__description_margin_large {
-        margin-bottom: 83px;
+    &_padding {
+        &_about {
+            padding: 81px 0 76px;
+        }
+
+        &_skills {
+            padding: 83px 0 99px;
+        }
+
+        &_portfolio {
+            padding: 81px 0;
+        }
+
+        &_footer {
+            padding: 82px 0 90px;
+        }
+    }
+
+    &__heading_margin {
+        &_about {
+            margin-bottom: 30px;
+        }
+        
+        &_skills {
+            margin-bottom: 50px;
+        }
+
+        &_portfolio {
+            margin-bottom: 65px;
+        }
+
+        &_footer {
+            padding-bottom: 27px;
+        }
+    }
+
+    &__description_margin {
+        &_skills {
+            margin-bottom: 83px !important;
+        }
+
+        &_footer {
+            margin-bottom: 40px !important;
+        }
+    }
+
+    &__description_color {
+        &_gray {
+            color: $color-gray;
+        }
     }
 }

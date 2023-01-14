@@ -25,13 +25,13 @@
                     <a href="#about" class="header__links-href">About me</a>
                 </li>
                 <li  class="header__links-item">
-                    <a href="#" class="header__links-href">Skills</a>
+                    <a href="#skills" class="header__links-href">Skills</a>
                 </li>
                 <li  class="header__links-item">
-                    <a href="#" class="header__links-href">Portfolio</a>
+                    <a href="#portfolio" class="header__links-href">Portfolio</a>
                 </li>
                 <li  class="header__links-item">
-                    <a href="#" class="header__links-href">Contacts</a>
+                    <a href="#footer" class="header__links-href">Contacts</a>
                 </li>
             </ul>
         </nav>
@@ -50,14 +50,14 @@
             </ul>    
         </div>
 
-        <img src="./images/header/photo_desktop.png" alt="Photo by Denis Novik" class="header__photo-desktop">
-        <img src="./images/header/photo_mobile.png" alt="Photo by Denis Novik" class="header__photo-mobile">
+        <img src="./images/header/photo_desktop.png" alt="Photo by Denis Novik." class="header__photo-desktop">
+        <img src="./images/header/photo_mobile.png" alt="Photo by Denis Novik." class="header__photo-mobile">
     </header>
 
     <main class="main">
-        <section class="block block_color_gray" id="about">
+        <section class="block block_color_gray block_padding_about" id="about">
             <div class="block__wrapper">
-                <h2 class="block__heading">About me</h2>
+                <h2 class="block__heading block__heading_margin_about">About me</h2>
                 <p class="block__description">Hi, I'm Denis – UX/UI designer from Minsk. I'm interested in design and everything connected with it.</p>
                 <p class="block__description">I'm studying at courses 
                     "Web and mobile design interfaces" 
@@ -65,35 +65,77 @@
                 <p class="block__description">Ready to implement excellent projects with wonderful people.</p>
             </div>
         </section>
-        <section class="block">
+        <section class="block block_padding_skills" id="skills">
             <div class="block__wrapper">
-                <h2 class="block__heading">Skills</h2>
-                <p class="block__description block__description_margin_large">I work in such programs as</p>
+                <h2 class="block__heading block__heading_margin_skills">Skills</h2>
+                <p class="block__description block__description_margin_skills">I work in such programs as</p>
                 <div class="block__skills-item">
-                    <img src="./images/block/skills/photoshop.svg" alt="Adobe Photoshop icon" class="block__skills-img">
+                    <img src="./images/block/skills/photoshop.svg" alt="Adobe Photoshop icon." class="block__skills-img">
                     <h3 class="block__skills-heading">Adobe
                         Photoshop</h3>
-                    <progress class="block__skils-progress" max="5" value="4"></progress>
+                    <progress class="block__skills-progress" max="5" value="4"></progress>
                 </div>
                 <div class="block__skills-item">
-                    <img src="./images/block/skills/illustrator.svg" alt="Adobe Illustrator icon" class="block__skills-img">
+                    <img src="./images/block/skills/illustrator.svg" alt="Adobe Illustrator icon." class="block__skills-img">
                     <h3 class="block__skills-heading">Adobe 
                         Illustrator</h3>
-                    <progress class="block__skils-progress" max="5" value="3"></progress>
+                    <progress class="block__skills-progress" max="5" value="3"></progress>
                 </div>
                 <div class="block__skills-item">
-                    <img src="./images/block/skills/aftereffects.svg" alt="Adobe After Effects icon" class="block__skills-img">
+                    <img src="./images/block/skills/aftereffects.svg" alt="Adobe After Effects icon." class="block__skills-img">
                     <h3 class="block__skills-heading">Adobe 
                         After Effects</h3>
-                    <progress class="block__skils-progress" max="5" value="4"></progress>
+                    <progress class="block__skills-progress" max="5" value="4"></progress>
                 </div>
                 <div class="block__skills-item">
-                    <img src="./images/block/skills/figma.svg" alt="Figma icon" class="block__skills-img">
+                    <img src="./images/block/skills/figma.svg" alt="Figma icon." class="block__skills-img">
                     <h3 class="block__skills-heading">Figma</h3>
-                    <progress class="block__skils-progress" max="5" value="4"></progress>
+                    <progress class="block__skills-progress" max="5" value="4"></progress>
+                </div>
+            </div>
+        </section>
+        <section class="block block_color_gray block_padding_portfolio" id="portfolio">
+            <div class="block__wrapper">
+                <h2 class="block__heading block__heading_margin_portfolio">Portfolio</h2>
+                <div class="block__portfolio-item">
+                    <img src="./images/block/portfolio/fashion-store.png" alt="Online fashion store." class="block__portfolio-img">
+                    <a href="#" target="_blank" class="block__portfolio-link">Online fashion store - Homepage</a>
+                </div>
+                <div class="block__portfolio-item">
+                    <img src="./images/block/portfolio/reebok-store.png" alt="Reebok Store." class="block__portfolio-img">
+                    <a href="#" target="_blank" class="block__portfolio-link">Reebok Store - Concept</a>
+                </div>
+                <div class="block__portfolio-item">
+                    <img src="./images/block/portfolio/braun-web.png" alt="Braun Landing Page." class="block__portfolio-img">
+                    <a href="#" target="_blank" class="block__portfolio-link">Braun Landing Page - Concept</a>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer class="block block_padding_footer" id="footer">
+        <div class="block__wrapper">
+            <h2 class="block__heading block__heading_margin_footer">Contacts</h2>
+            <p class="block__description block__description_margin_footer">Want to know more or just chat? 
+                You are welcome!</p>
+            <button class="block__button">Send message</button>
+            <ul class="block__contacts-list">
+                <li>
+                    <a href="#" target="_blank"><img src="./images/block/footer/linkedin.svg" alt="LinkedIn." class="block__contacts-img"></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="./images/block/footer/instagram.svg" alt="Instagram." class="block__contacts-img"></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="./images/block/footer/behance.svg" alt="Behance." class="block__contacts-img"></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="./images/block/footer/dribble.svg" alt="Dribble." class="block__contacts-img"></a>
+                </li>
+            </ul>
+            <p class="block__description block__description_color_gray">Like me on
+                LinkedIn, Instagram, Behance, Dribble</p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,7 +1,9 @@
 @charset "UTF-8";
 .block {
-  padding: 81px 0 76px;
   margin: auto;
+  /* ---Блок Skills--- */
+  /* ---Блок Portfolio--- */
+  /* ---Блок Contacts--- */
 }
 .block__wrapper {
   margin: auto;
@@ -9,7 +11,6 @@
   text-align: center;
 }
 .block__heading {
-  margin-bottom: 30px;
   font-size: 34px;
   font-weight: bold;
   line-height: 42px;
@@ -25,7 +26,22 @@
 .block__description:not(:last-child) {
   margin-bottom: 42px;
 }
-.block__skils-progress {
+.block__skills-item:not(:last-child) {
+  margin-bottom: 85px;
+}
+.block__skills-img {
+  margin-bottom: 24px;
+  height: 89px;
+}
+.block__skills-heading {
+  margin-bottom: 41px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 17px;
+  color: #828282;
+  white-space: pre-line;
+}
+.block__skills-progress {
   width: 131px;
   height: 26px;
   border: none;
@@ -33,20 +49,101 @@
   -webkit-mask: url(../images/block/Star.svg);
   mask: url(../images/block/Star.svg);
 }
-.block__skils-progress::-webkit-progress-bar {
+.block__skills-progress::-webkit-progress-bar {
   background: #e5e5e5;
 }
-.block__skils-progress::-moz-progress-bar {
+.block__skills-progress::-moz-progress-bar {
   background: #000000;
 }
-.block__skils-progress::-webkit-progress-value {
+.block__skills-progress::-webkit-progress-value {
   background: #000000;
+}
+.block__portfolio-item:not(:last-child) {
+  margin-bottom: 78px;
+}
+.block__portfolio-img {
+  margin-bottom: 35px;
+  width: 316px;
+}
+.block__portfolio-link {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 22px;
+  color: #000000;
+  /* Не ругайтесь за следующий ховер :) Здесь нет элементов слева/справа, поэтому ничего страшного не произойдет */
+}
+.block__portfolio-link:hover {
+  font-weight: bold;
+}
+.block__button {
+  margin-bottom: 48px;
+  width: 316px;
+  height: 42px;
+  border: 2px solid #070707;
+  border-radius: 21px;
+  background: #070707;
+  cursor: pointer;
+  transition: all 0.3s, box-shadow 0.2s;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 22px;
+  color: #ffffff;
+}
+.block__button:hover, .block__button:focus-visible {
+  background: #ffffff;
+  color: #070707;
+}
+.block__button:active {
+  box-shadow: 0 0 10px 0 #828282;
+}
+.block__contacts-list {
+  display: flex;
+  gap: 52px;
+  margin-bottom: 48px;
+  list-style: none;
+}
+.block__contacts-img {
+  height: 40px;
+  transition: 0.3s;
+}
+.block__contacts-img:hover {
+  transform: scale(1.1);
 }
 
 /* ---Модификаторы--- */
 .block_color_gray {
   background: #f6f6f6;
 }
-.block__description_margin_large {
-  margin-bottom: 83px;
+.block_padding_about {
+  padding: 81px 0 76px;
+}
+.block_padding_skills {
+  padding: 83px 0 99px;
+}
+.block_padding_portfolio {
+  padding: 81px 0;
+}
+.block_padding_footer {
+  padding: 82px 0 90px;
+}
+.block__heading_margin_about {
+  margin-bottom: 30px;
+}
+.block__heading_margin_skills {
+  margin-bottom: 50px;
+}
+.block__heading_margin_portfolio {
+  margin-bottom: 65px;
+}
+.block__heading_margin_footer {
+  padding-bottom: 27px;
+}
+.block__description_margin_skills {
+  margin-bottom: 83px !important;
+}
+.block__description_margin_footer {
+  margin-bottom: 40px !important;
+}
+.block__description_color_gray {
+  color: #828282;
 }
