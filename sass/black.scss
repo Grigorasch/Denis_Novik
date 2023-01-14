@@ -1,0 +1,77 @@
+$color-black: #070707;
+$color-gray: #828282;
+$color-background-gray: #f6f6f6;
+
+$default-font: (color: #000000, weight: normal);
+@mixin font($size, $line_height, $color, $weight) {
+    font: {
+        size: $size * 1px;
+        weight: $weight;
+    }
+    line-height: $line_height * 1px;
+    color: $color;
+}
+
+.block {
+    padding: 81px 0 76px;
+    margin: auto;
+
+    &__wrapper {
+        margin: auto;
+        width: 316px;
+        text-align: center;
+    }
+
+
+
+    &__heading {
+        margin-bottom: 30px;
+
+        @include font(34, 42, #000000, bold);
+    }
+
+    &__description {
+        @include font(18, 22, $default-font...);
+        white-space: pre-line;
+
+        &:not(:last-child) {
+            margin-bottom: 42px;
+        }
+    }
+
+    &__skils {
+
+        &-progress {
+            width: 131px;
+            height: 26px;
+    
+            border: none;
+            background: #e5e5e5;
+            -webkit-mask: url(../images/block/Star.svg);
+            mask: url(../images/block/Star.svg);
+    
+            &::-webkit-progress-bar {
+                background: #e5e5e5;
+            }
+    
+            &::-moz-progress-bar {
+                background: #000000;
+            }
+    
+            &::-webkit-progress-value {
+                background: #000000;
+            }
+        }
+    }
+}
+
+/* ---Модификаторы--- */
+.block {
+    &_color_gray {
+        background: $color-background-gray;
+    }
+
+    &__description_margin_large {
+        margin-bottom: 83px;
+    }
+}

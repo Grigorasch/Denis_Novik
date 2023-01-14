@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/black.css">
     <title>Document</title>
 </head>
 <body>
@@ -21,7 +22,7 @@
                     <a href="#" class="header__links-href header_current-link">Home</a>
                 </li>
                 <li  class="header__links-item">
-                    <a href="#" class="header__links-href">About me</a>
+                    <a href="#about" class="header__links-href">About me</a>
                 </li>
                 <li  class="header__links-item">
                     <a href="#" class="header__links-href">Skills</a>
@@ -52,5 +53,47 @@
         <img src="./images/header/photo_desktop.png" alt="Photo by Denis Novik" class="header__photo-desktop">
         <img src="./images/header/photo_mobile.png" alt="Photo by Denis Novik" class="header__photo-mobile">
     </header>
+
+    <main class="main">
+        <section class="block block_color_gray" id="about">
+            <div class="block__wrapper">
+                <h2 class="block__heading">About me</h2>
+                <p class="block__description">Hi, I'm Denis – UX/UI designer from Minsk. I'm interested in design and everything connected with it.</p>
+                <p class="block__description">I'm studying at courses 
+                    "Web and mobile design interfaces" 
+                    in IT-Academy.</p>
+                <p class="block__description">Ready to implement excellent projects with wonderful people.</p>
+            </div>
+        </section>
+        <section class="block">
+            <div class="block__wrapper">
+                <h2 class="block__heading">Skills</h2>
+                <p class="block__description block__description_margin_large">I work in such programs as</p>
+                <div class="block__skills-item">
+                    <img src="./images/block/skills/photoshop.svg" alt="Adobe Photoshop icon" class="block__skills-img">
+                    <h3 class="block__skills-heading">Adobe
+                        Photoshop</h3>
+                    <progress class="block__skils-progress" max="5" value="4"></progress>
+                </div>
+                <div class="block__skills-item">
+                    <img src="./images/block/skills/illustrator.svg" alt="Adobe Illustrator icon" class="block__skills-img">
+                    <h3 class="block__skills-heading">Adobe 
+                        Illustrator</h3>
+                    <progress class="block__skils-progress" max="5" value="3"></progress>
+                </div>
+                <div class="block__skills-item">
+                    <img src="./images/block/skills/aftereffects.svg" alt="Adobe After Effects icon" class="block__skills-img">
+                    <h3 class="block__skills-heading">Adobe 
+                        After Effects</h3>
+                    <progress class="block__skils-progress" max="5" value="4"></progress>
+                </div>
+                <div class="block__skills-item">
+                    <img src="./images/block/skills/figma.svg" alt="Figma icon" class="block__skills-img">
+                    <h3 class="block__skills-heading">Figma</h3>
+                    <progress class="block__skils-progress" max="5" value="4"></progress>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

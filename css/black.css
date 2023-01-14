@@ -1,0 +1,52 @@
+@charset "UTF-8";
+.block {
+  padding: 81px 0 76px;
+  margin: auto;
+}
+.block__wrapper {
+  margin: auto;
+  width: 316px;
+  text-align: center;
+}
+.block__heading {
+  margin-bottom: 30px;
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 42px;
+  color: #000000;
+}
+.block__description {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 22px;
+  color: #000000;
+  white-space: pre-line;
+}
+.block__description:not(:last-child) {
+  margin-bottom: 42px;
+}
+.block__skils-progress {
+  width: 131px;
+  height: 26px;
+  border: none;
+  background: #e5e5e5;
+  -webkit-mask: url(../images/block/Star.svg);
+  mask: url(../images/block/Star.svg);
+}
+.block__skils-progress::-webkit-progress-bar {
+  background: #e5e5e5;
+}
+.block__skils-progress::-moz-progress-bar {
+  background: #000000;
+}
+.block__skils-progress::-webkit-progress-value {
+  background: #000000;
+}
+
+/* ---Модификаторы--- */
+.block_color_gray {
+  background: #f6f6f6;
+}
+.block__description_margin_large {
+  margin-bottom: 83px;
+}
