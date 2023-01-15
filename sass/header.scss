@@ -12,12 +12,12 @@ $default-font: (color: #000000, weight: normal);
 }
 
 .header {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
     margin: 0 auto 83px;
     padding-top: 65px;
 
-    box-sizing: content-box;
+    // box-sizing: content-box;
     width: 316px;
 
     /* ---nav--- */
@@ -28,6 +28,8 @@ $default-font: (color: #000000, weight: normal);
     }
 
     &__burger {
+        position: relative;
+        z-index: 1;
         padding: 0;
 
         width: 33px;
@@ -36,6 +38,10 @@ $default-font: (color: #000000, weight: normal);
         border: none;
         background: transparent;
         cursor: pointer;
+
+        &:focus-visible {
+            outline-offset: 3px;
+        }
 
         &-menu {
             display: block;
@@ -84,6 +90,7 @@ $default-font: (color: #000000, weight: normal);
 
         list-style: none;
         background: #ffffff;
+        transition: 1s;
 
         &-item {
             &:not(:last-child) {
@@ -124,6 +131,27 @@ $default-font: (color: #000000, weight: normal);
 
     &__lang {
         display: none;
+        position: relative;
+
+        &::before {
+            content: "|";
+            position: absolute;
+            top: -3px;
+            left: 55px;
+
+            @include font(34, 42, $color-black, bold);
+        }
+
+        &-href {
+            text-decoration: none;
+            @include font(34, 42, $color-gray, bold);
+            transition: 0.3s;
+
+            &:hover {
+                text-decoration: underline;
+                color: $color-black;
+            }
+        }
     }
 
     /* ---photo--- */
@@ -155,5 +183,61 @@ $default-font: (color: #000000, weight: normal);
 
     &_menu_visible {
         display: flex;
+        z-index: 1;
+    }
+
+    &__burger_on {
+        position: fixed;
+        z-index: 2;
+        top: 66px;
+        right: 29px;
+
+        width: 22px;
+        height: 22px;
+
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            left: -3px;
+            top: 9px;
+
+            width: 28px;
+            height: 4px;
+
+            background: $color-gray;
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__burger-menu_off {
+        display: none;
+    }
+
+    &__lang_visible {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        z-index: 2;
+        right: 58px;
+        bottom: 57px;
+
+        width: 144px;
+
+        transform-origin: right bottom;
+        transform: rotate(90deg);
+    }
+}
+
+/* ---Адаптация--- */
+@media (min-width: 937px) {
+    .header {
+
     }
 }

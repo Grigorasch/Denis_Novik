@@ -1,10 +1,7 @@
 @charset "UTF-8";
 .header {
-  display: flex;
-  flex-direction: column;
   margin: 0 auto 83px;
   padding-top: 65px;
-  box-sizing: content-box;
   width: 316px;
   /* ---nav--- */
   /* ---wrapper--- */
@@ -15,12 +12,17 @@
   text-align: end;
 }
 .header__burger {
+  position: relative;
+  z-index: 1;
   padding: 0;
   width: 33px;
   height: 20px;
   border: none;
   background: transparent;
   cursor: pointer;
+}
+.header__burger:focus-visible {
+  outline-offset: 3px;
 }
 .header__burger-menu {
   display: block;
@@ -56,6 +58,7 @@
   height: 100vh;
   list-style: none;
   background: #ffffff;
+  transition: 1s;
 }
 .header__links-item:not(:last-child) {
   padding-bottom: 68px;
@@ -93,6 +96,29 @@
 }
 .header__lang {
   display: none;
+  position: relative;
+}
+.header__lang::before {
+  content: "|";
+  position: absolute;
+  top: -3px;
+  left: 55px;
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 42px;
+  color: #070707;
+}
+.header__lang-href {
+  text-decoration: none;
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 42px;
+  color: #828282;
+  transition: 0.3s;
+}
+.header__lang-href:hover {
+  text-decoration: underline;
+  color: #070707;
 }
 .header__photo-container {
   display: flex;
@@ -115,4 +141,44 @@
 }
 .header_menu_visible {
   display: flex;
+  z-index: 1;
 }
+.header__burger_on {
+  position: fixed;
+  z-index: 2;
+  top: 66px;
+  right: 29px;
+  width: 22px;
+  height: 22px;
+}
+.header__burger_on::before, .header__burger_on::after {
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: 9px;
+  width: 28px;
+  height: 4px;
+  background: #828282;
+}
+.header__burger_on::before {
+  transform: rotate(45deg);
+}
+.header__burger_on::after {
+  transform: rotate(-45deg);
+}
+.header__burger-menu_off {
+  display: none;
+}
+.header__lang_visible {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 2;
+  right: 58px;
+  bottom: 57px;
+  width: 144px;
+  transform-origin: right bottom;
+  transform: rotate(90deg);
+}
+
+/* ---Адаптация--- */
