@@ -104,7 +104,6 @@ $default-font: (color: #000000, weight: normal);
             transition: 0.3s;
 
             &:hover {
-                text-decoration: underline;
                 color: $color-black;
             }
         }
@@ -236,8 +235,47 @@ $default-font: (color: #000000, weight: normal);
 }
 
 /* ---Адаптация--- */
-@media (min-width: 937px) {
+@media (min-width: 945px) {
     .header {
+        margin-bottom: 104px;
+        padding-top: 0;
 
+        width: 944px;
+
+        /* ---nav--- */
+        &__nav {
+            margin-bottom: 0;
+
+            height: 113px;
+
+            text-align: start;
+        }
+
+        &__burger {
+            display: none;
+        }
+
+        &__links {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            position: static;
+            padding: 0;
+
+            height: 100%;
+
+            &-item {
+                &:not(:last-child) {
+                    padding-bottom: 0;
+                }
+            }
+
+            &-href {
+                @include font(18, 22, $color-gray, bold);
+            }
+        }
     }
+    
 }
